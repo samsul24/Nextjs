@@ -86,7 +86,7 @@ export default function About() {
         </ul>
       </div>
 
-      <div className="max-w-md mx-6 mt-20 mb-14 bg-white rounded-xl shadow-md overflow-hidden md:max-w-max ">
+      <div className="max-w-md mx-6  max-[1240px]:mx-0 mt-20 mb-14 bg-white rounded-xl shadow-md overflow-hidden md:max-w-max ">
         <div className="md:flex  ">
           <div className="p-8 mt-8  ">
             <Image
@@ -98,7 +98,7 @@ export default function About() {
             />
           </div>
           <div className="p-8">
-            <div className=" p-9 text-[20px] text-white bg-red-500 ">
+            <div className=" min-[600px]:p-9 max-[1240px]:p-2  text-[20px] text-white bg-red-500 ">
               <h1 className="text-3xl font-bold mb-5">About</h1>
               <p className="indent-8">
                 PT.Hamengku Karya Founded in 1981, which initially Specializes

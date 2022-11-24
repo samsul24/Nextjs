@@ -60,8 +60,8 @@ const Navbar = () => {
           <div
             className={
               nav
-                ? "sm:hidden absolute  top-0 left-0 right-0 bottom-0 mt-14 flex justify-left items-center w-full h-80 bg-white text-left p-3  font-bold ease-in duration-300"
-                : "sm:hidden absolute  top-0 left-[-100%] right-0 bottom-0 mt-14 flex justify-left items-center h-80 w-full  bg-zinc-900 text-left p-3  font-bold ease-in duration-300"
+                ? "sm:hidden absolute  top-0 left-0 right-0 bottom-0 mt-14 flex justify-left items-center w-full h-80 bg-white text-left p-3  font-bold ease-in duration-100"
+                : "sm:hidden absolute  top-0 left-[-100%] right-0 bottom-0 mt-14 flex justify-left items-center h-80 w-full  bg-zinc-900 text-left p-3  font-bold ease-in duration-100"
             }
           >
             <ul className="text-zinc-900 font-bold mt-[-20]">
