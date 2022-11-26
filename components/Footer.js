@@ -8,10 +8,10 @@ export const Footer = () => {
             {/* <img src={icLogo} alt={icLogo} className="h-16" /> */}
           </div>
           <div className="p-2 rounded-md text-right items-center handphone:justify-center lg:text-right handphone:text-center md:text-center">
-            <div className="flex justify-end mb-9 justify-center laptop:justify-end">
+            <div className="flex mb-9 justify-center laptop:justify-end">
               <a className="p-3" href="#twitter">
                 <svg
-                  class="w-6 h-6 text-white hover:text-blue-300  fill-current"
+                  className="w-6 h-6 text-white hover:text-blue-300  fill-current"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
@@ -23,7 +23,6 @@ export const Footer = () => {
                   className="w-6 h-6 text-white hover:text-rose-500 fill-current"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
-                  class="w-7 h-7"
                 >
                   <path
                     fill="currentColor"

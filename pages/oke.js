@@ -1,34 +1,89 @@
-import Image from "next/image";
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 
 const Oke = () => {
+  const [posts, setPosts] = useState([]);
+  const apiEndPoint1 = "https://jsonplaceholder.typicode.com/posts";
+  const apiEndPoint = "https://jsonplaceholder.typicode.com/posts?q=";
+  let cancelToken;
+  const handleSearchChange = async (e) => {
+    const value = e.target.value;
+    if (cancelToken) {
+      cancelToken.cancel("Operations cancelled due to new request");
+    }
+    cancelToken = axios.CancelToken.source();
+    let result;
+    try {
+      result = await axios.get(apiEndPoint + value, {
+        cancelToken: cancelToken.token,
+      });
+      const { data: res } = await axios.get(apiEndPoint + value);
+      setPosts(res);
+    } catch (error) {
+      console.log(error);
+    }
+    console.log({ result });
+  };
+
+  const handleUpdate = async (items) => {
+    items.title = "Update title";
+    await axios.put(apiEndPoint1 + "/" + items.id);
+    const postsClone = [...posts];
+    const index = postsClone.indexOf(items);
+    postsClone[index] = { ...items };
+    setPosts(postsClone);
+    alert("berhasil update data");
+  };
+
+  const handeDelete = async (items) => {
+    await axios.delete(apiEndPoint1 + "/" + items.id + items);
+    setPosts(posts.filter((p) => p.id != items.id));
+    alert("berhasil hapus data");
+  };
   return (
-    <div>
-      <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-        <div class="md:flex">
-          <div class="md:shrink-0">
-            <Image
-              className="h-48 w-full object-cover md:h-full md:w-4"
-              height="700"
-              width="700"
-              src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
-            />
-          </div>
-          <div class="p-8">
-            <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-              Civil Work
-            </div>
-            <a
-              href="#"
-              class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
-            >
-              Incredible accomodation for your team
-            </a>
-            <p class="mt-2 text-slate-500">
-              Looking to take your team away on a retreat to enjoy awesome food
-              and take in some sunshine? We have a list of places to do just
-              that.
-            </p>
+    <div className="container mx-auto my-auto justify-center items-center">
+      <div className="max-w-md mx-auto bg-white mt-28  rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+        <div className="md:flex">
+          <div className="p-8">
+            <input
+              onChange={handleSearchChange}
+              className="w-96 h-9 border-solid border-2 "
+              type="text"
+              placeholder="Search"
+            ></input>
+
+            <table className="table-auto mt-20">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Update</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                {posts.map((items) => (
+                  <tr key={items.id}>
+                    <td>{items.title}</td>
+                    <td>
+                      <button
+                        onClick={() => handleUpdate(items)}
+                        className="rounded-lg bg-yellow-500 text-white p-2"
+                      >
+                        <h1>Update</h1>
+                      </button>
+                    </td>
+                    <td>
+                      <button
+                        onClick={() => handeDelete(items)}
+                        className="rounded-lg bg-red-500 text-white p-2"
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

@@ -1,16 +1,17 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
-  const [notif, setNotif] = useState(false);
+  const [color, setColor] = useState("transparant");
   const [nav, setNav] = useState(false);
   const router = useRouter();
 
   const handleNav = () => {
     setNav(!nav);
   };
+
   return (
     <>
       <div className="sticky max-[1240px]:mt-0 drop-shadow-lg  min-[600px]:mt-12  left-0 top-0 w-full z-10 ease-in duration-300 bg-white ">
@@ -53,14 +54,14 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <div onClick={handleNav} className="mr-5 sm:hidden z-10 ">
-            {nav ? <AiOutlineClose /> : <AiOutlineMenu size={20} />}
+          <div onClick={handleNav} className="mr-5 sm:hidden z-10  ">
+            {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
           </div>
 
           <div
             className={
               nav
-                ? "sm:hidden absolute  top-0 left-0 right-0 bottom-0 mt-14 flex justify-left items-center w-full h-80 bg-white text-left p-3  font-bold ease-in duration-100"
+                ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 mt-14 flex justify-left items-center w-full h-80 bg-white text-left p-3  font-bold ease-in duration-100"
                 : "sm:hidden absolute  top-0 left-[-100%] right-0 bottom-0 mt-14 flex justify-left items-center h-80 w-full  bg-zinc-900 text-left p-3  font-bold ease-in duration-100"
             }
           >

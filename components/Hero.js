@@ -1,11 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
   return (
-    <div className="flex items-center justify-center h-screen mb-20 bg-fixed bg-center bg-cover custom-img">
-      {/* <div className="absolute top-0 left-0 right-0 bottom-0  bg-zinc-900/30 z-[2] " /> */}
+    <>
       <div className="absolute left-0 top-0 w-full z-10 ease-in duration-300 bg-gray-700 max-[600px]:p-1 max-[600px]:hidden  ">
         <div className=" flex justify-between items-center ">
           <ul className=" sm:flex text-sm  text-white">
@@ -38,7 +36,7 @@ const Hero = () => {
           <div className="flex p-3">
             <a className="ml-5" href="#twitter">
               <svg
-                class="w-6 h-6 text-white hover:text-blue-300  fill-current"
+                className="w-6 h-6 text-white hover:text-blue-300  fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -50,8 +48,7 @@ const Hero = () => {
                 className="w-6 h-6 text-white  hover:text-rose-500 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
-                class="w-7 h-7"
-              >
+               >
                 <path
                   fill="currentColor"
                   d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
@@ -69,7 +66,7 @@ const Hero = () => {
             </a>
             <a className="ml-5" href="#telegram">
               <svg
-                class="w-6 h-6 text-white hover:text-blue-500 fill-current"
+                className="w-6 h-6 text-white hover:text-blue-500 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 496 512"
               >
@@ -79,25 +76,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="p-5  text-white z-[2] ml-[-15rem] mt-16 ] ">
-        <h1 className="font-bold ml-64 hover:text-red-500 max-[1240px]:text-xl max-[1240px]:ml-60 min-[600px]:text-5xl">
-          GENERAL CONTRACTOR
-        </h1>
-        <p className="py-6 ml-64 max-[1240px]:text-[12px] max-[1240px]:text-left max-[1240px]:ml-60 min-[600px]:text-xl">
-          Our services in Civil, Mechanical, Electrical & Plumbing Construction
-          began in 1981. We responsible for providing all of the material,
-          labor, equipment (engineering vehicles and tools) and services
-          necessary for the construction of the project.
-          <br />
-          <br />
-          <Link href="/contact" passHre>
-            <button className="px-8 py-4 border hover:text-red-500 rounded-lg max-[1240px]:px-4 max-[1240px]:py-1 ">
-              Contact
-            </button>
-          </Link>
-        </p>
-      </div>
-    </div>
+    </>
   );
 };
 

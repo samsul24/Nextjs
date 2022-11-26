@@ -1,0 +1,136 @@
+import Image from "next/image";
+import React from "react";
+
+const Client = () => {
+  return (
+    <div>
+      {" "}
+      <div>
+        <div>
+          <div className="md:flex justify-center mt-12">
+            <Image
+              className="m-auto"
+              height="200"
+              width="200"
+              src="http://www.hamengkukarya.co.id/img/clients/01.png"
+              alt=""
+            />
+            <Image
+              className="m-auto"
+              height="200"
+              width="200"
+              src="http://www.hamengkukarya.co.id/img/clients/02.png"
+              alt=""
+            />
+            <Image
+              className="m-auto"
+              height="200"
+              width="200"
+              src="http://www.hamengkukarya.co.id/img/clients/03.png"
+              alt=""
+            />
+            <Image
+              className="m-auto"
+              height="200"
+              width="200"
+              src="http://www.hamengkukarya.co.id/img/clients/04.png"
+              alt=""
+            />
+            <Image
+              className="m-auto"
+              height="200"
+              width="200"
+              src="http://www.hamengkukarya.co.id/img/clients/05.png"
+              alt=""
+            />
+          </div>
+          <div className="md:flex justify-center mt-12">
+            <Image
+              className="m-auto"
+              height="200"
+              width="200"
+              src="http://www.hamengkukarya.co.id/img/clients/06.png"
+              alt=""
+            />
+            <Image
+              className="m-auto"
+              height="200"
+              width="200"
+              src="http://www.hamengkukarya.co.id/img/clients/07.png"
+              alt=""
+            />
+            <Image
+              className="m-auto"
+              height="200"
+              width="200"
+              src="http://www.hamengkukarya.co.id/img/clients/08.png"
+              alt=""
+            />
+            <Image
+              className="m-auto"
+              height="200"
+              width="200"
+              src="http://www.hamengkukarya.co.id/img/clients/09.png"
+              alt=""
+            />
+            <Image
+              className="m-auto"
+              height="200"
+              width="200"
+              src="http://www.hamengkukarya.co.id/img/clients/10.png"
+              alt=""
+            />
+          </div>
+          <div className="md:flex justify-center mt-12">
+            <Image
+              className="m-auto"
+              height="200"
+              width="200"
+              src="http://www.hamengkukarya.co.id/img/clients/11.png"
+              alt=""
+            />
+            <Image
+              className="m-auto"
+              height="200"
+              width="200"
+              src="http://www.hamengkukarya.co.id/img/clients/12.png"
+              alt=""
+            />
+            <Image
+              className="m-auto"
+              height="200"
+              width="200"
+              src="http://www.hamengkukarya.co.id/img/clients/13.png"
+              alt=""
+            />
+            <Image
+              className="m-auto"
+              height="200"
+              width="200"
+              src="http://www.hamengkukarya.co.id/img/clients/14.png"
+              alt=""
+            />
+            <Image
+              className="m-auto"
+              height="200"
+              width="200"
+              src="http://www.hamengkukarya.co.id/img/clients/15.png"
+              alt=""
+            />
+          </div>
+          <div className="md:flex justify-center mt-12">
+            <Image
+              className="m-auto"
+              height="200"
+              width="200"
+              src="http://www.hamengkukarya.co.id/img/clients/16.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Client;
